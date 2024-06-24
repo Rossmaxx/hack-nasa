@@ -1,24 +1,23 @@
 const mainBody = document.querySelector(".main-body")
-let alreadyHacked = false
-// const newLine = document.createElement("<br>")
+const terminal = document.createElement("div")
+terminal.style.backgroundColor = "#000000"
+terminal.style.border = "1px solid #ffffff"
+terminal.style.borderRadius = "4px"
+terminal.style.width = "500px"
+terminal.style.fontFamily = '"Courier New", Courier, monospace'
 
 async function hack(){
-    if (alreadyHacked == true){
-        let newDiv = document.createElement("div")
-        newDiv.innerText = "You already hacked NASA, You are now in FBI watchlist"
-        mainBody.append(newDiv)
-        return
-    }
+    document.getElementById("initial-text").style.display = "none"
+    mainBody.appendChild(terminal)
 
-    mainBody.append("Initiating Hacking, get ready")
-    mainBody.appendChild(document.createElement("br"))
+    terminal.append("Initiating Hacking, get ready")
+    terminal.appendChild(document.createElement("br"))
     for (let i=0; i <= 100; i++){
-        mainBody.append(`Hacking in progress [${i}% completed]`)
-        mainBody.appendChild(document.createElement("br"))
+        terminal.append(`Hacking in progress [${i}% completed]`)
+        terminal.appendChild(document.createElement("br"))
         await sleep(100) // async function is used to make this await function work
     }
 
-    alreadyHacked = true
     let finishedStatus = document.createElement("div")
     finishedStatus.innerHTML = "Congrats, you hacked NASA.<br>"
     finishedStatus.innerHTML +=  "<a href=\"https://www.youtube.com/watch?v=FD8SgayyCv8\">Click this link for your files</a>"
