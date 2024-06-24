@@ -1,6 +1,7 @@
 const mainBody = document.querySelector(".main-body")
 const terminal = document.createElement("div")
 terminal.style.backgroundColor = "#000000"
+terminal.style.color = "#9ACD32"
 terminal.style.border = "1px solid #ffffff"
 terminal.style.borderRadius = "4px"
 terminal.style.width = "500px"
